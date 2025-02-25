@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang ="sv"> 
-    <head> 
-        <title> 
-        </title>  
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Game Pro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="phone-frame">
+      <div class="phone-content">
+        <h1>Mathematical Quiz Game</h1>
 
-        <link rel="stylesheet" type="text/css" href="style.css"> 
-        <script src="myscript.js"></script>  
-
-        <meta charset="UTF-8">  
-
-
-
-    </head> 
-
-    <body class = "bgr3">  
-
-        <header> 
-
-            <h1>Educational Games</h1>
-               
-            <nav>
-           
-            <a class = "nav" href="index.html">Quiz</a>  
-            <a class = "nav" href="5.html">Math Game</a>
-            <a class = "nav" href="projekt.html">Memory</a>    
-  
-            </nav> 
-          </header>     
-
-          <h1 id = "quiz">Quiz</h1>
-
-        <div id="ccontainer">
-            <canvas id="myCanvas" width="550" height="420"> 
-            </canvas> 
-
-            <button id = "restart" onclick="location.href='index.html'" type="button">Restart game</button> 
+        <div id="mathcontainer">
+          <h2 id="titel"> Solve Maths Problems</h2>
+          <div id="buttoncontainer">
+            <button id="buttonggr">Randomize Multiplication Problem</button>
+            <button id="buttonAdd">Randomize Addition Problem</button>
+            <button id="buttonSub">Randomize Subtraction Problem</button>
+          </div>
+          <p id="question"></p>
+          <input
+            id="inputNumber"
+            maxlength="4"
+            type="text"
+            placeholder="Your answer"
+          />
+          <button id="button1">Submit Answer</button>
+          <p id="answer"></p>
         </div>
 
+        <div id="developerDetails">
+          <h3>Developer Details</h3>
+          <p>Full Name: Innocent Goodness</p>
+          <p>Matric Number: ft23cmp0002</p>
+          <p>Department: Computer Science</p>
+        </div>
+        <hr>
+        <center>
+          <button id="viewTeamButton">View Team Memebers</button>
+        </center>
+      </div>
+    </div>
 
-
-    </body>
-</html> 
+    <script src="script.js"></script>
+  </body>
+</html>

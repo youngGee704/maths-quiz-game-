@@ -1,468 +1,112 @@
-
-html { 
-  overflow-y: hidden;
+:root {
+    --primary-color: #4A90E2; /* Blue */
+    --secondary-color: #D0021B; /* Red */
+    --background-color: #E0F7FA; /* Light Cyan */
+    --correct-color: #4CAF50; /* Green */
+    --wrong-color: #F44336; /* Red */
+    --header-bg: rgba(255, 244, 252, 0.9);
+    --footer-bg: rgba(0, 0, 0, 0.7);
+    --font-family: 'Courier New', Courier, monospace; /* Changed font */
 }
 
-body { 
-    
-    width: auto; 
-    height: 1500px; 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-    color:rgb(255, 255, 255); 
-    
-    background-color: rgb(65, 54, 91);   
-    background-image: url("bgr.jpeg");
-    background-repeat: none; 
-    background-size:contain;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    overflow-x: hidden;
-
-  /*background-image: url("bgr.jpeg"); 
-  background-size: cover;*/
-  
-} 
-
-h1 { 
-
-   /* Centrera objekt i css*/  /*centrera vertikalt*/ 
-
-    width: 100%;
-    margin: 0 auto;  
-
-    margin-top: 50px;
-
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
-    justify-content: center;  
-    /* */
-  
-}  
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-image: url('background.jpg'); /* Add a background image */
+    background-size: cover;
+    background-position: center;
+}
 
-#quiz { 
-
- /* left: 670px;  
-  position: relative; */ 
-
-  display: flex; 
-  align-items: center;  
-  margin-top: -50px;
-  color: white;  
-} 
-
-header { 
-
-    width: auto; 
-    height: 130px; 
-    background-color: rgb(255, 244, 252);
-    color:rgb(53, 60, 132); 
-    top: -50px; 
-
-    border-radius: 5px;
-
-    
-
-    position: relative;
-} 
-
-nav { 
-
-    position: relative; 
-    background-color: rgb(187, 187, 187);
-    width: 1423px; 
-    height: 33px;   
-    /*centrera vertikalt*/ 
-
+.phone-frame {
     width: 100%;
-    margin: 0 auto; 
-
-    /* */
-
-    display: flex;
-    justify-content: center;  
-
-    margin-top: 60px;
-}  
-a { 
-    color: #ffffff;
-    padding-left: 15px;
-    padding-right: 15px;  
-    top: 8px; 
-    position: relative; 
-    font-size:large; 
-    
-    /*left: 570px;*/ 
-
-    
-    
-} 
-
-a:link {
-    
-    text-decoration: none;
-  }
-
-  a:hover {
-    
-    color:red;
-  }
-
-  a:active {
-    background-color: transparent;
-  } 
-
-  p { 
-      width: 300px; 
-      float: left;  
-      margin-left: 520px;
-      margin-top: 50px;
-  }  
-
-  #phemsida { 
-    float:none; 
-    margin-left:210px; 
-
-  }
-
-  #hemsida { 
-
-    position: relative; 
-    display: inline;  
-    float:left; 
-    top: 100px;
-    width: 600px; 
+    max-width: 375px;
     height: auto;
-  } 
-
-  #container { 
-    position: relative; 
-    padding-left: 50px; 
-    padding-right: 50px; 
-    margin-right: 70px;
-    display: block;
-
-  } 
-  #div2 { 
-
-    position: relative; 
-    float:right; 
-    top: -415px; 
-  
-    left: 350px; 
-    
-    width: 800px;
-  } 
-
-  #p2 { 
-
-    right: 330px; 
-    position: relative;  
-    display: block; 
-    float: top;
-
-  } 
-
-  #gif { 
-      float: top; 
-  } 
-
-  .text { 
- 
-        width: 300px; 
-        float: left;  
-        margin-left: 360px;
-        margin-top: 50px;
-  } 
-  .text1 { 
-    width: 300px; 
-    float: right;  
-    margin-top: -229px;
-    margin-right: 270px;
-}    
-
-.bgr3 { 
-  overflow-x: hidden; 
-
-} 
-
-#restart { 
-  color: white; 
-  background-color: blue;
+    border: 16px solid #000;
+    border-radius: 36px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
 }
 
-#ccontainer{
-  width:550px;
-  margin: 0 auto;
-  margin-top:10px;  
-
-
-  background-image: url("quizpicture.png");  
-  background-repeat:initial; 
-  background-size: 110%;  
-
-  border-style: solid; 
-  border-color: rgb(201, 201, 201);
-  }
-
-  #myCanvas {
-      
-  }  
-
-  button { 
-
-    background-color: black; 
-    color: rgb(207, 162, 104);
-
-  } 
-
-  #hurtext { 
-    width: 500px; 
-        float: left;  
-        margin-left: 50px;
-        margin-top: 20px; 
-      
-    border-style: solid; 
-    border-color: black;
-
-  } 
-
-#u3 { 
-    margin-left: 50px;
-  }   
-
-  #hurtext1 { 
-    width: 500px; 
-        float: left;  
-        margin-right: 50px;
-        margin-top: 20px; 
-    margin-top: -440px;
-      
-    border-style: solid; 
-    border-color: black; 
-
-    float: right;
-
-  } 
-
-  #u5 { 
-    margin-right: 50px; 
-    margin-top: -50px; 
-    float: right;
-  } 
-
-h2 {
-
-  margin-left: 380px;
-} 
-
-#inputNumber { 
-
-  margin-top: 30px;   
-  margin-left:400px;
-  margin-right: 10px;
-  
-
-} 
-
-#button { 
- 
-  background-color: blanchedalmond;  
-  color: black; 
-}  
-#buttonminus { 
- 
-  background-color: blanchedalmond;  
-  color: black; 
-
-}  
-#buttonggr { 
- 
-  background-color: blanchedalmond;   
-  color: black; 
-
-}  
-#button1 { 
- 
-  background-color: blanchedalmond;   
-  color: black; 
-
-}  
-
-#mathcontainer { 
-  
-  width: 100%;
-  display: inline; 
-
-  margin: 0 auto;  
-
-  color:rgb(255, 255, 255);
-} 
-
-#buttoncontainer { 
-  
-  width: 100%;
-  display: flex; 
-
-  justify-content: center;
-  margin: 0 auto; 
-  margin-top: 150px;
+.phone-content {
+    padding: 20px;
 }
 
-#hej { 
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-  border-style: solid; 
-  border-color: white;   
-  background-image: url("mathpic1.jpeg");  
+#mathcontainer {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
 
-  background-repeat: no-repeat; 
-  background-size: 100%;
+#buttoncontainer {
+    margin-bottom: 20px;
+}
 
-  width: 900px;  
-  height: 345px;
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px;
+    font-size: 16px; /* Increased font size */
+}
 
-  margin: 0 auto; 
+button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
 
-} 
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: calc(100% - 22px);
+}
 
-#answer {  
-  position: relative;
-  right: 160px;
-} 
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--footer-bg);
+    color: white;
+}
 
-#question {  
-  position: relative;
-  right: 106px;
-} 
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
 
-#inputone { 
+    .phone-frame {
+        width: 100%;
+    }
+}
 
-  color: yellow; 
-  background-color: blue;  
-  width: fit-content; 
-  height: 50px;  
-  
-  position: absolute;
-  top: 40%;  
-  left: 50%; 
-  
-  transform: translate(-50%, -50%); 
-    
-  } 
-  
-  #input1 { 
-  
-  color: yellow; 
-  background-color: blue;  
-  width: 200px; 
-  height: 50px;  
-  
-  position: absolute;
-  top: 60%;  
-  left: 30%; 
-  
-  transform: translate(-50%, -50%); 
-    
-  } 
+#developerDetails {
+    margin-top: 20px;
+    text-align: center;
+}
 
-  #input2 { 
-  
-    color: yellow; 
-    background-color: blue;  
-    width: 200px; 
-    height: 50px;  
-    
-    position: absolute;
-    top: 60%;  
-    left: 45%; 
-    
-    transform: translate(-50%, -50%); 
-      
-    } 
-
-    #input3 { 
-  
-      color: yellow; 
-      background-color: blue;  
-      width: 200px; 
-      height: 50px;  
-      
-      position: absolute;
-      top: 60%;  
-      left: 60%; 
-      
-      transform: translate(-50%, -50%); 
-        
-      } 
-      #input4 { 
-  
-        color: yellow; 
-        background-color: blue;  
-        width: 200px; 
-        height: 50px;  
-        
-        position: absolute;
-        top: 60%;  
-        left: 75%; 
-        
-        transform: translate(-50%, -50%); 
-          
-        }  
-
-
-      #projekttitel { 
-
-        display: flex;
-        justify-content: center;   
-        margin: 0 auto;
-        
-        color: white;
-  
-
-      } 
-
-      #projektdiv {  
-
-        border-style: solid; 
-        border-color: white; 
-        display: block; 
-        height: 400px; 
-        width: 1000px; 
-        margin: 0 auto;    
-      
-        background-image: url("sverige100.jpeg"); 
-        background-repeat: no-repeat; 
-        background-size: 100%;
-
-        
-      } 
-
-      #pu { 
-
-        border-color: black; 
-        border-style: solid; 
-        width: 400px; 
-        float: right;
-
-        margin-right: 100px; 
-
-      }   
-
-      #putitel { 
-
-        margin: auto;
-
-        margin-right: 100px;
-      }   
-
-      .pdf { 
-
-        left: 1px;
-        float: left;  
-        margin-top: 40px; 
-        margin-bottom: 30px;
-        color: black;
-      }
-
-     
-
-     
-
-
+#teamMembers {
+    margin-top: 20px;
+}
